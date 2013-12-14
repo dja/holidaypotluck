@@ -1,0 +1,30 @@
+<%= render 'layouts/header' %>
+<div class="container">
+	<table>
+	<% if @items.present? %>
+		<% @items.each do |i| %>
+			<tr>
+				<td><%= image_tag i.user.image %><%= i.user.first_name %> is bringing a <%= i.item_type %> of <%= i.title %> <% if i.link.present? %><%= link_to "Check it out", i.link %><% end %><% if i.user == Userbin.current_user %><%= link_to "", items_path, data: {id: i.id}, class: "ion-close-circled" %><% end %></td>
+			</tr>
+		<% end %>
+	<% end %>
+	</table>
+	<h3>What are you bringing?</h3>
+	<%= form_for Item.new do |i| %>
+		<%= i.select :item_type, [["Appetizer", "Appetizer"], ["Entree", "Entree"], ["Dessert", "Dessert"], ["Drinks", "Drinks"]] %>
+		<%= i.text_field :title, placeholder: "What is it?" %>
+		<%= i.text_field :link, placeholder: "Link to it" %>
+		<%= i.submit %>
+	<% end %>
+</div>
+
+
+<script>
+  $(function(){
+    $("a.ion-close-circled").click(function(){
+    	var item = $(this).data("id");
+      	$.post('/item/delete', { id: item }, function(data,status){
+      });
+    });
+  });
+</script>

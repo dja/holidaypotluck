@@ -1,0 +1,13 @@
+<div class="home">
+	<div class="home-header">
+		<h1>HolidayPotluck</h1>
+		<h3>Balboa Island</h3>
+		<a>Sunday, December 22</a>
+	</div>
+	<% if !Userbin.user_logged_in? %>
+	<ul>
+		<li><a href="#contact" class="ub-login">Log in</a></li>
+		<li><a class="ub-signup">Sign up</a></li>
+	</ul>
+	<% end %>
+</div>

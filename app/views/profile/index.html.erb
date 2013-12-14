@@ -1,0 +1,16 @@
+<%= render 'layouts/header' %>
+<div class="container">
+	<%= image_tag Userbin.current_user.image if Userbin.current_user.image %>
+	<h1>Welcome <%= Userbin.current_user.first_name %>!</h1>
+
+	<h3>What are you bringing?</h3>
+	<%= form_for Item.new do |i| %>
+		<%= i.select :item_type, [["Appetizer", "Appetizer"], ["Entree", "Entree"], ["Dessert", "Dessert"], ["Drinks", "Drinks"]] %>
+		<%= i.text_field :title, placeholder: "What is it?" %>
+		<%= i.text_field :link, placeholder: "Link to it" %>
+		<%= i.submit %>
+	<% end %>
+
+	<h3><%= link_to "See what others are bringing", items_path %></h3>
+
+</div>

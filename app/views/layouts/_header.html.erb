@@ -1,0 +1,11 @@
+<header>
+<nav>
+<h1>HolidayPotluck</h1>
+<% if Userbin.user_logged_in? %>
+	<ul>
+	  <li><%= link_to Userbin.current_user.name, profile_path %></li>
+	  <li><a href="#" class="ub-logout">Log out</a></li>
+	</ul>
+<% end %>
+</nav>
+</header>

@@ -1,0 +1,98 @@
+$red: #c40000;
+$green: #545e36;
+
+
+html, body {
+	background-color: #85b25e;
+	border-top: 1px solid #53713b;
+}
+
+h1 {
+	font-family: 'Landmark Dimensional A', 'Landmark Dimensional B'; 
+	font-weight: 400; 
+	font-style: normal;
+	color: $red;
+}
+
+h3 {
+	font-family: 'Gotham SSm A', 'Gotham SSm B';
+	font-weight: 700;
+	font-style: normal;
+	color: $green;
+}
+
+a {
+	font-family: 'Gotham SSm A', 'Gotham SSm B';
+	font-weight: 400;
+	font-style: normal;
+	color: $green;
+}
+
+nav {
+	padding: 0 10px;
+
+	h1 {
+		display: inline-block;
+		margin: 0;
+	}
+	ul {
+		float: right;
+		margin: 10px 0;
+		padding: 0;
+	}
+	li {
+		display: inline;
+	}
+	a:link, a:visited {
+		text-decoration: none;
+	}
+}
+
+li {
+	list-style-type: none;
+}
+.home {
+	text-align: center;
+
+	ul {
+		padding: 0;
+	}
+
+	li {
+		font-family: 'Gotham SSm A', 'Gotham SSm B';
+		font-weight: 400;
+		font-style: normal;
+		padding: 10px 10px;
+		width: 180px;
+		margin: 0 auto;
+		margin-bottom: 6px;
+		border: 3px solid $red;
+		border-radius: 6px;
+		font-size: 18px;
+	}
+	a:link, a:visited {
+		text-decoration: none;
+		color: $red;
+	}
+	li:hover {
+		background-color: rgba($red, 0.1);
+	}
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+	nav {
+	margin: 10px 0;
+
+		h1 {
+			font-size:16px;
+		}
+		ul {
+			margin: 0;
+		}
+		a {
+			font-size: 12px;
+		}
+	}
+}

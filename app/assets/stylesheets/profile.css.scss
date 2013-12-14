@@ -1,0 +1,18 @@
+$red: #c40000;
+$green: #545e36;
+
+.container {
+	text-align: center;
+	margin-top: 50px;
+
+	h1 {
+		font-family: 'Landmark Regular A', 'Landmark Regular B';
+		font-weight: 400;
+		font-style: normal;
+	}
+
+	img {
+		border-radius: 50%;
+		border: 2px solid $red;
+	}
+}
