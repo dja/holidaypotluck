@@ -70,14 +70,3 @@ input[type="submit"] {
 	width: 220px;
 	margin-bottom: 20px;
 }
-
-
-/* Smartphones (portrait) ----------- */
-@media only screen 
-and (max-width : 320px) {
-	table {
-		a.ion-close-circled {
-			margin-top: -80px;
-		}
-	}
-}
