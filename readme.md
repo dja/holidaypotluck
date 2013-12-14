@@ -12,6 +12,6 @@ Hope you have an amazing holidays!
 Daniel
 
 ####Screenshots
-![Login](http://d.pr/i/1PcL)
-![Profile](http://d.pr/i/LNgC)
-![Items](http://d.pr/i/rQOS)
+[Login](http://d.pr/i/1PcL)
+[Profile](http://d.pr/i/LNgC)
+[Items](http://d.pr/i/rQOS)
