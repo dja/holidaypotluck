@@ -5,7 +5,7 @@
 
 	<h3>What are you bringing?</h3>
 	<%= form_for Item.new do |i| %>
-		<%= i.select :item_type, [["Appetizer", "Appetizer"], ["Entree", "Entree"], ["Dessert", "Dessert"], ["Drinks", "Drinks"]] %>
+		<%= i.select :item_type, [["Appetizer", "Appetizer"], ["Entree", "Entree"], ["Dessert", "Dessert"], ["Drink", "Drink"]] %>
 		<%= i.text_field :title, placeholder: "What is it?" %>
 		<%= i.text_field :link, placeholder: "Link to it" %>
 		<%= i.submit %>
