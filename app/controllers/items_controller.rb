@@ -1,7 +1,11 @@
 class ItemsController < ApplicationController
 
 	def index
-		@items = Item.all
+		if Userbin.current_user
+			@items = Item.all
+		else
+			redirect_to root_url
+		end
 	end
 
 	def new
