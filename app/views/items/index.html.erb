@@ -4,7 +4,7 @@
 	<% if @items.present? %>
 		<% @items.each do |i| %>
 			<tr>
-				<td>Someone is bringing a <%= i.item_type %> of <%= i.title %> <% if i.link.present? %><%= link_to "Check it out", i.link %><% end %><% if i.user == Userbin.current_user %><%= link_to "", items_path, data: {id: i.id}, class: "ion-close-circled" %><% end %></td>
+				<td><% if i.user.image.present? %><%= image_tag i.user.image %><% end %><% if i.user.first_name.present? %><%= i.user.first_name %> <% end %> is bringing a <%= i.item_type %> of <%= i.title %> <% if i.link.present? %><%= link_to "Check it out", i.link %><% end %><% if i.user == Userbin.current_user %><%= link_to "", items_path, data: {id: i.id}, class: "ion-close-circled" %><% end %></td>
 			</tr>
 		<% end %>
 	<% end %>

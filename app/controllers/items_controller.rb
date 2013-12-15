@@ -8,9 +8,11 @@ class ItemsController < ApplicationController
 	end
 
 	def create
-		@item = Item.new(item_params)
-		@item.user = Userbin.current_user
-		@item.save!
+		if Userbin.current_user
+			@item = Item.new(item_params)
+			@item.user = Userbin.current_user
+			@item.save!
+		end
 		redirect_to items_path
 	end
 
